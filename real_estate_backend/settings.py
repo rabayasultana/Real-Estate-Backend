@@ -13,12 +13,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from decouple import config
 import dj_database_url
 import os
-# import environ
-
-# # Initialize environment variables
-# env = environ.Env()
-# environ.Env.read_env()  # This loads the .env file
-
 
 
 from pathlib import Path
@@ -36,12 +30,12 @@ SECRET_KEY = config("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = config("DEBUG", default=False, cast=bool)
+DEBUG = True
+# DEBUG = config("DEBUG", default=False, cast=bool)
 
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ["real-estate-backend-i4gg.onrender.com"]
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ["real-estate-backend-i4gg.onrender.com"]
 
 
 # ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(",")
@@ -97,44 +91,24 @@ WSGI_APPLICATION = 'real_estate_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=config("DATABASE_URL")
-#     )
-# }
-
-# DATABASES = {
-#     'default': dj_database_url.config(conn_max_age=600)
-# }
-
-# DATABASES = {
-#     'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600)
-# }
-
-
-# Database configuration from .env
-# DATABASES = {
-#     'default': env.db('DATABASE_URL')  # This will read DATABASE_URL from the .env file
-# }
-
-# Or if you used individual variables
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Or if you used individual variables
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         'HOST': config('DB_HOST'),
+#         'PORT': config('DB_PORT'),
+#     }
+# }
 
 
 
