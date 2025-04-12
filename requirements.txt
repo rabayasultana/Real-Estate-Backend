@@ -64,7 +64,7 @@ nbformat==5.9.2
 nest-asyncio==1.5.7
 notebook==7.0.3
 notebook_shim==0.2.3
-numpy==1.26.4  # compatible with Python 3.11+
+numpy==1.25.2
 overrides==7.4.0
 packaging==23.1
 pandas==2.1.0
@@ -83,7 +83,7 @@ pyparsing==3.1.1
 python-dateutil==2.8.2
 python-json-logger==2.0.7
 pytz==2023.3.post1
-# pywin32==306  # Commented out – Windows-only, not needed on Linux
+pywin32==306
 pywinpty==2.0.11
 PyYAML==6.0.1
 pyzmq==25.1.1
@@ -93,7 +93,7 @@ referencing==0.30.2
 requests==2.31.0
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
-# rpds-py==0.10.3  # Commented out – requires Rust, causes build failure
+rpds-py==0.10.3
 scikit-learn==1.5.1
 scipy==1.14.0
 seaborn==0.12.2
@@ -118,5 +118,3 @@ webcolors==1.13
 webencodings==0.5.1
 websocket-client==1.6.3
 widgetsnbextension==4.0.9
-gunicorn
-whitenoise
