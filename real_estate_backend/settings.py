@@ -34,8 +34,9 @@ DEBUG = True
 # DEBUG = config("DEBUG", default=False, cast=bool)
 
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ["your-service-name.onrender.com"]
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["real-estate-backend-i4gg.onrender.com"]
+
 
 # ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(",")
 
